@@ -4,7 +4,7 @@ import random
 st.set_page_config(page_title="Ticket Site", page_icon="🎤", layout="wide")
 
 # --- Прост фон, който работи ---
-background_url = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745"
+background_url = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30"
 
 st.markdown(
     f"""
@@ -14,7 +14,18 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+    }}
+
+    /* леко бял слой за да се вижда текста */
+    .stApp::before {{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.35);
+        z-index: -1;
     }}
     </style>
     """,
