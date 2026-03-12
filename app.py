@@ -58,7 +58,7 @@ if st.button("Купи билет"):
     st.write("Дата:", date)
     st.write("Тип билет:", ticket)
     st.write("Екстри:", extras)
-    
+   
     st.info(random.choice(jokes))
-    
+   
     st.balloons()
