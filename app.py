@@ -1,10 +1,14 @@
 import streamlit as st
+import random
 
+st.set_page_config(page_title="Ticket Site", page_icon="🎤")
+
+# --- BACKGROUND IMAGE ---
 st.markdown(
     """
     <style>
     .stApp {
-        background-image: url("https://share.google/nf2A4BGf8aDi0VmBV");
+        background-image: url("https://drive.google.com/uc?export=view&id=YOUR_FILE_ID");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -13,13 +17,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-import streamlit as st
-import random
 
-st.set_page_config(page_title="Ticket Site", page_icon="🎤")
-
+# --- APP CONTENT ---
 st.title("🎤 Билети за концерт на Емануела")
-
 st.write("Купи билет за най-легендарния концерт на годината!")
 
 name = st.text_input("👤 Въведи име")
@@ -44,12 +44,11 @@ rating = st.slider("⭐ Колко очакваш да е як концертъ�
 tickets = st.number_input("🎫 Брой билети", 1, 10)
 
 if st.button("Купи билет"):
-    
     jokes = [
         "Билетът е запазен! Плаща се с 2 водки.",
         "VIP билетите свършиха... защото Кекса купи всички.",
         "Системата засече прекалено много кючек енергия.",
-        "Успешно! Но това е майтап сайт 😄"
+        "Успешно! Но това е майтап сайт 😄",
         "Баклавички приятен концерт!!!"
     ]
 
