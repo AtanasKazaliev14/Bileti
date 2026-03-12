@@ -14,10 +14,10 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        color: #0b3d91;  /* син цвят на текста */
+        color: #ffffff;  /* бял цвят на текста */
     }}
 
-    /* леко бял слой за по-добра четимост */
+    /* леко тъмен слой за по-добра четимост на бял текст */
     .stApp::before {{
         content: "";
         position: fixed;
@@ -25,13 +25,13 @@ st.markdown(
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(255,255,255,0.35);
+        background: rgba(0,0,0,0.3);
         z-index: -1;
     }}
 
     /* смяна на цвета на заглавия, текст и labels */
     h1, h2, h3, h4, h5, h6, p, label, div {{
-        color: #0b3d91 !important;
+        color: #ffffff !important;
     }}
     </style>
     """,
