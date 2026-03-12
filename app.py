@@ -1,26 +1,16 @@
 import streamlit as st
 import random
-import re
 
 st.set_page_config(page_title="Ticket Site", page_icon="🎤")
 
-# --- Въведи Google Drive share линк ---
-google_drive_link = "https://share.google.com/file/d/NF2A4BGf8aDi0VmBV/view?usp=sharing"
+# Примерен красив фон (цветен, абстрактен)
+background_url = "https://images.unsplash.com/photo-1508923567004-3a6b8004f3d6?auto=format&fit=crop&w=1920&q=80"
 
-# --- Автоматично извличане на File ID ---
-match = re.search(r'/d/([a-zA-Z0-9_-]+)', google_drive_link)
-if match:
-    file_id = match.group(1)
-    direct_link = f"https://drive.google.com/uc?export=view&id={file_id}"
-else:
-    direct_link = ""  # fallback ако линкът не е валиден
-
-# --- CSS за фон ---
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url("{direct_link}");
+        background-image: url("{background_url}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
