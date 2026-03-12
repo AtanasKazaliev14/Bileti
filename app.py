@@ -1,14 +1,22 @@
 import streamlit as st
+import base64
+
+def get_base64(file):
+    with open(file, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+bg = get_base64("background.jpg")
 
 st.markdown(
-    """
+    f"""
     <style>
-    .stApp {
-        background-image: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a");
+    .stApp {{
+        background-image: url("data:image/jpg;base64,{bg}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
+    }}
     </style>
     """,
     unsafe_allow_html=True
