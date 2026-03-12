@@ -3,31 +3,24 @@ import random
 
 st.set_page_config(page_title="Ticket Site", page_icon="🎤", layout="wide")
 
-# --- ФОН С HTML ---
+# --- Прост фон, който работи ---
 background_url = "https://images.unsplash.com/photo-1508923567004-3a6b8004f3d6?auto=format&fit=crop&w=1920&q=80"
 
 st.markdown(
     f"""
     <style>
-    .full-screen-bg {{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    .stApp {{
         background-image: url('{background_url}');
         background-size: cover;
         background-position: center;
-        z-index: -1;
-        filter: brightness(0.7); /* прави текста по-видим */
+        background-repeat: no-repeat;
     }}
     </style>
-    <div class="full-screen-bg"></div>
     """,
     unsafe_allow_html=True
 )
 
-# --- СЪДЪРЖАНИЕ ---
+# --- Съдържание ---
 st.title("🎤 Билети за концерт на Емануела")
 st.write("Купи билет за най-легендарния концерт на годината!")
 
