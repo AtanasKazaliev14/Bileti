@@ -1,21 +1,12 @@
-import streamlit as st
-import base64
-
-def get_base64(file):
-    with open(file, "rb") as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-bg = get_base64("background.jpg")
+bg_url = "https://www.google.com/search?sca_esv=f5b8765b7b50f1bf&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3jljrY5CkLlk8Dq3IvwBz-SJyfRX_inP-J3Cs9lQZu9J-w-s39WMlkYCuZrBZDnSTW7OXuSDEQSVLUzfyzqI1jWpENUC4uWpCIdxdmLCQnvNttnwC5mQyhzLnniQQw33yXpl3w0&q=%D0%B0%D1%80%D0%B5%D0%BD%D0%B0+8888&sa=X&ved=2ahUKEwinsomB3JmTAxWthf0HHcZZBSMQtKgLegQIEhAB&biw=1536&bih=738&dpr=1.25#sv=CAMSVhoyKhBlLXFzanRtM2NKc21lRFBNMg5xc2p0bTNjSnNtZURQTToOU2RwTEppRUIxb3owY00gBCocCgZtb3NhaWMSEGUtcXNqdG0zY0pzbWVEUE0YADABGAcgg9z_zgEwAkoIEAIYAiACKAI"
 
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url("data:image/jpg;base64,{bg}");
+        background-image: url("{bg_url}");
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat;
     }}
     </style>
     """,
