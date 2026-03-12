@@ -3,7 +3,7 @@ import random
 
 st.set_page_config(page_title="Ticket Site", page_icon="🎤", layout="wide")
 
-# --- Прост фон, който работи ---
+# --- ФОН ---
 background_url = "https://images.unsplash.com/photo-1492684223066-81342ee5ff30"
 
 st.markdown(
@@ -14,9 +14,10 @@ st.markdown(
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        color: #0b3d91;  /* син цвят на текста */
     }}
 
-    /* леко бял слой за да се вижда текста */
+    /* леко бял слой за по-добра четимост */
     .stApp::before {{
         content: "";
         position: fixed;
@@ -27,12 +28,17 @@ st.markdown(
         background: rgba(255,255,255,0.35);
         z-index: -1;
     }}
+
+    /* смяна на цвета на заглавия, текст и labels */
+    h1, h2, h3, h4, h5, h6, p, label, div {{
+        color: #0b3d91 !important;
+    }}
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# --- Съдържание ---
+# --- СЪДЪРЖАНИЕ ---
 st.title("🎤 Билети за концерт на Емануела")
 st.write("Купи билет за най-легендарния концерт на годината!")
 
