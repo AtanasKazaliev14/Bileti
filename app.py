@@ -1,4 +1,19 @@
 import streamlit as st
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+import streamlit as st
 import random
 
 st.set_page_config(page_title="Ticket Site", page_icon="🎤")
