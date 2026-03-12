@@ -51,7 +51,7 @@ date = st.selectbox(
 
 ticket = st.selectbox(
     "🎟️ Тип билет",
-    ["Стандартен – 40лв", "VIP – 120лв", "Ultra VIP – 500лв"]
+    ["Стандартен – 40 евро", "VIP – 120 евро", "Ultra VIP – 1500 евро"]
 )
 
 extras = st.multiselect(
