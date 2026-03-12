@@ -4,16 +4,17 @@ import random
 st.set_page_config(page_title="Ticket Site", page_icon="🎤", layout="wide")
 
 # --- Прост фон, който работи ---
-background_url = "https://images.unsplash.com/photo-1508923567004-3a6b8004f3d6?auto=format&fit=crop&w=1920&q=80"
+background_url = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745"
 
 st.markdown(
     f"""
     <style>
     .stApp {{
-        background-image: url('{background_url}');
+        background-image: url("{background_url}");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     }}
     </style>
     """,
